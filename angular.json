@@ -104,8 +104,23 @@
           "options": {
             "browserTarget": "ng-funk:build"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "34d491c9-a40e-4134-8688-950887042cc2",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

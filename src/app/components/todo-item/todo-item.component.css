@@ -1,0 +1,40 @@
+.todo-item-wrapper {
+
+    display: flex;
+
+    flex-flow: row;
+
+    gap: 8px;
+
+}
+
+.todo-item-content {
+
+    flex: 0 0 auto;
+
+}
+
+.todo-item-actions {
+
+    flex: 0 1 auto;
+
+    display: flex;
+
+    flex-flow: row;
+
+}
+
+.todo-item-deleted {
+    text-decoration: line-through;
+    color: #cccccccc;
+}
+
+.todo-item-todo {
+    text-decoration: none;
+    color: black;
+}
+
+.todo-item-complete {
+    text-decoration: line-through;
+    color: black;
+}

@@ -1,0 +1,14 @@
+<div class="todo-item-wrapper" *ngIf="todoItem">
+
+    <p [ngClass]="todoItemStyles">{{todoItem.content}}</p>
+
+    <div class="todo-item-actions">
+
+        <button *ngIf="canDelete" (click)="deleteTodoItem.emit(todoItem.id);">Delete</button>
+        <button *ngIf="canComplete" (click)="completeTodoItem.emit(todoItem.id);">Complete</button>
+        <button *ngIf="canReallyDelete" (click)="reallyDeleteTodoItem.emit(todoItem.id);">Really Delete</button>
+        <button *ngIf="canTodo" (click)="recoverTodoItem.emit(todoItem.id);">Todo</button>
+
+    </div>
+
+</div>

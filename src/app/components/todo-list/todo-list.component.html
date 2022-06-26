@@ -1,0 +1,14 @@
+<h2>{{title}} ({{todoItems?.length ?? 0}})</h2>
+
+<ul>
+
+  <li *ngFor="let todoItem of todoItems">
+
+    <funk-todo-item [todoItem]="todoItem" (deleteTodoItem)="deleteTodoItem.emit($event);"
+      (completeTodoItem)="completeTodoItem.emit($event);" (reallyDeleteTodoItem)="reallyDeleteTodoItem.emit($event);"
+      (recoverTodoItem)="recoverTodoItem.emit($event);">
+    </funk-todo-item>
+
+  </li>
+
+</ul>

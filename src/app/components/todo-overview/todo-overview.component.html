@@ -1,0 +1,18 @@
+<h1>Todos</h1>
+
+<funk-new-todo (newTodo)="onNewTodo($event);"></funk-new-todo>
+
+<funk-todo-list title="Todo" [todoItems]="todoTodos$ | async" (completeTodoItem)="onCompleteTodoItem($event);"
+    (deleteTodoItem)="onDeleteTodoItem($event);" (reallyDeleteTodoItem)="onReallyDeleteTodoItem($event);"
+    (recoverTodoItem)="onRecoverTodoItem($event);">
+</funk-todo-list>
+
+<funk-todo-list title="Complete" [todoItems]="completeTodos$ | async" (completeTodoItem)="onCompleteTodoItem($event);"
+    (deleteTodoItem)="onDeleteTodoItem($event);" (reallyDeleteTodoItem)="onReallyDeleteTodoItem($event);"
+    (recoverTodoItem)="onRecoverTodoItem($event);">
+</funk-todo-list>
+
+<funk-todo-list title="Deleted" [todoItems]="deletedTodos$ | async" (completeTodoItem)="onCompleteTodoItem($event);"
+    (deleteTodoItem)="onDeleteTodoItem($event);" (reallyDeleteTodoItem)="onReallyDeleteTodoItem($event);"
+    (recoverTodoItem)="onRecoverTodoItem($event);">
+</funk-todo-list>
